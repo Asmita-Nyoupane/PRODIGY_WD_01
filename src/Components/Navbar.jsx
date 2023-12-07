@@ -82,13 +82,15 @@ const Navbar = () => {
       </div>
       {/* herosectionn
        */}
+
       <section className="hero-section">
         <p>Welcome to </p>
         <h1>Home Food Service</h1>
       </section>
-      <section className="hero-section">
+
+      {/* <section className="hero-section">
         <h1>Our services</h1>
-      </section>
+      </section> */}
     </>
   );
 };

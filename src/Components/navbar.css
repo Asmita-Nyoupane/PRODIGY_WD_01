@@ -26,6 +26,7 @@ li {
 .container {
   position: fixed;
   width: 100%;
+  z-index: 1000;
 }
 
 .main-nav {
@@ -33,8 +34,8 @@ li {
   display: grid;
   grid-template-columns: 10rem 1fr 2fr 1fr 10rem;
   transition: 0.3s ease;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px; */
 }
 .main-nav.scrolled {
   background-color: rgb(208, 198, 208);
@@ -85,7 +86,7 @@ li {
   font-size: 2.5rem;
   font-weight: 400;
   text-transform: uppercase;
-  background: -webkit-linear-gradient(#eee, rgb(69, 57, 248));
+  background: -webkit-linear-gradient(#eee, rgb(33, 33, 34));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -105,7 +106,8 @@ li {
 }
 .menu-link ul li:hover > a {
   transform-origin: left;
-  color: rgb(111, 111, 136);
+  color: rgb(108, 108, 160);
+  background-color: rgba(197, 197, 134, 0.064);
   transition: 0.9s;
 }
 
@@ -115,6 +117,7 @@ li {
 
 .social-media .hamburger-menu {
   display: none;
+  color: #5c5353;
 }
 
 .facebook {
@@ -132,22 +135,34 @@ li {
 /* hero section   */
 
 .hero-section {
-  height: 80rem;
+  position: relative;
+  top: 10rem;
+  height: 90rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  background-image: url("https://images.unsplash.com/photo-1514986888952-8cd320577b68?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9tZSUyMGZvb2R8ZW58MHx8MHx8fDA%3D");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-section p {
+  margin-top: -150px;
   font-size: 3rem;
   text-transform: capitalize;
+  color: #eee;
+  bottom: 20px;
 }
 
 .hero-section h1 {
-  font-size: 5rem;
+  color: #eee;
+  font-size: 7rem;
   text-transform: uppercase;
   text-align: center;
+  bottom: 20px;
 }
 
 /* responsive css style  */
@@ -187,7 +202,6 @@ li {
   }
 
   .mobile-menu-link {
-    background-color: white;
     font-size: medium;
     height: 20rem;
     display: grid;
@@ -201,6 +215,9 @@ li {
   }
 
   .mobile-menu-link ul {
+    background-color: transparent rgb(7, 7, 7);
+    color: black;
+    color: brown;
     height: 20rem;
     display: flex;
     justify-content: space-around;
@@ -235,6 +252,9 @@ li {
   .social-media .hamburger-menu {
     display: block;
     font-size: 3rem;
+  }
+  .hero-section {
+    top: -10rem;
   }
 }
 
@@ -271,6 +291,7 @@ li {
   .logo,
   .social-media ul {
     height: 6rem;
+    color: black;
   }
 
   .logo h2 {
@@ -288,10 +309,7 @@ li {
     display: block;
     font-size: 2.5rem;
   }
-
-  /* hero section  */
-
-  .hero-section h1 {
-    font-size: 3.8rem;
+  .hero-section {
+    top: -10rem;
   }
 }
